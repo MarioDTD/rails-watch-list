@@ -17,6 +17,8 @@ class ListsController < ApplicationController
     redirect_to list_path(@list)
   end
 
+
+
   private
 
   def list_params

@@ -1,8 +1,8 @@
-<h1>Hello</h1>
+<h1>Lists</h1>
 
 <% @lists.each do |list| %>
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
     <%= link_to list.name, list_path(list) %>
   </div>
 </div>
