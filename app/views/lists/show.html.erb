@@ -4,6 +4,8 @@
 <ul>
   <% @list.bookmarks.each do|bookmark| %>
   <h3 class="mt-5"><%= bookmark.movie.title %></h3>
+  <p><%= bookmark.movie.overview %></p>
+  <%= image_tag bookmark.movie.poster_url, width: 300 %>
   <li class="list-group-item">
     <%= bookmark.comment %>
       <%= link_to "Remove",
@@ -12,6 +14,10 @@
                   data: { confirm: "Are you sure?" }, class: "btn btn-sm btn-danger" %>
   </li>
   <% end %>
+
+  </div>
+</div>
+
 </ul>
 <%= link_to "Back", lists_path, class: "btn btn-sm btn-primary" %>
 <%= link_to "New Bookmark", new_list_bookmark_path(@list), class: "btn btn-sm btn-primary" %>

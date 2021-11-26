@@ -3,7 +3,7 @@ require 'json'
 require 'open-uri'
 puts "destroying movies"
 
-Movie.destroy_all
+# Movie.destroy_all
 
 puts "Creating movies"
 
@@ -13,7 +13,9 @@ results = JSON.parse(response)["results"].first(10)
 
 results.each do |result|
   movie = Movie.new(
-    title: result[:title]
+    title: result["title"],
+    overview: result["overview"],
+    poster_url: "https://image.tmdb.org/t/p/w500#{result["poster_path"]}"
   )
   movie.save!
 end
