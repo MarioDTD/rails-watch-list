@@ -4,7 +4,7 @@
 <div class="cards">
   <div class="card-category my-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
   url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
-    <%= link_to list.name, list_path(list), class: "" %>
+    <%= link_to list.name, list_path(list), class: "a-list" %>
     <%= link_to "Remove",
                   list_path(list),
                   method: :delete,
